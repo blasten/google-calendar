@@ -2,7 +2,8 @@
 
 import {div} from './dom-utils';
 
-export default function addHours($) {
+export default function addHours() {
+  var $ = this.$;
   var el;
 
   $.hours.appendChild(div());

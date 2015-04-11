@@ -14,8 +14,15 @@ export default Polymer({
   },
 
   ready: function() {
-    buildWeeklyView(this.$, this.startDate);
-    addHours(this.$);
-    addDays(this.$, this.startDate);
+    buildWeeklyView.call(this);
+    addHours.call(this);
+    addDays.call(this);
+
+    // defer
+    require.ensure(['./drag-drop'], (require => {
+      let setUpDragDrop = require('./drag-drop');
+
+      setUpDragDrop.call(this);
+    }).bind(this));
   }
 });

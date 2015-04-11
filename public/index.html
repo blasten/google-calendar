@@ -8,7 +8,7 @@
   <link rel="import" href="../components/paper-fab/paper-fab.html">
   <link rel="import" href="../components/event-calendar/event-calendar.html">
 
-  <link href='http://fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Roboto:500, 400,300' rel='stylesheet' type='text/css'>
   <style shim-shadowdom>
     core-scaffold core-toolbar,
     core-scaffold::shadow core-toolbar {
@@ -34,27 +34,34 @@
       overflow: hidden;
       position: relative;
     }
+
+    .calendar-headline {
+      width: 960px;
+      margin: auto;
+      font-family: 'Roboto', sans-serif;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 50px;
+    }
     </style>
 </head>
 <body unresolved>
-
-<core-scaffold responsiveWidth="3000px" class="dark-theme">
-
-  <core-header-panel navigation flex mode="seamed">
-    <core-toolbar>
-    </core-toolbar>
-    <core-menu>
-      <core-item icon="settings" label="item1"></core-item>
-      <core-item icon="settings" label="item2"></core-item>
-    </core-menu>
-  </core-header-panel>
-
-  <div tool flex class="title">
-    Calendar
-  </div>
-  <paper-icon-button icon="refresh" tool></paper-icon-button>
-  <event-calendar> </event-calendar>
-</core-scaffold>
-<paper-fab raised icon="add" style="position: fixed; bottom: 20px; right: 20px;"></paper-fab>
+  <core-scaffold responsiveWidth="3000px" class="dark-theme">
+    <core-header-panel navigation flex mode="seamed">
+      <core-toolbar>
+      </core-toolbar>
+      <core-menu>
+        <core-item icon="settings" label="item1"></core-item>
+        <core-item icon="settings" label="item2"></core-item>
+      </core-menu>
+    </core-header-panel>
+    <div tool flex class="title">
+      Calendar
+    </div>
+    <paper-icon-button icon="refresh" tool></paper-icon-button>
+    <h2 class="calendar-headline">This week</h2>
+    <event-calendar> </event-calendar>
+  </core-scaffold>
+  <paper-fab raised icon="add" style="position: fixed; bottom: 20px; right: 20px;"></paper-fab>
 </body>
 </html>

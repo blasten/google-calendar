@@ -14,7 +14,9 @@ function makeSVGLine(x1, y1, width, dashed) {
       '" />';
 }
 
-export function buildWeeklyView($, startDate) {
+export function buildWeeklyView() {
+  var $ = this.$;
+  var startDate = this.startDate;
   var width = $.events.offsetWidth;
   var dayWidth = parseInt(width / 7);
   var space = consts.SPACE_BETWEEN_DAYS;
@@ -33,7 +35,7 @@ export function buildWeeklyView($, startDate) {
   var svgCurrentDay = '';
 
   if (firstWeekDay().getTime() === startDate) {
-    var currentDay = today().getDay(), rectX, rectW;
+    let currentDay = today().getDay(), rectX, rectW;
 
     if (currentDay === 0) {
       rectX = 0;

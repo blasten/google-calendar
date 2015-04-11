@@ -73,7 +73,7 @@ customComponents.forEach(function(component) {
 
   // copy
   copyDependencies.push('copy-' + component);
-  gulp.task('copy-' + component, function() {
+  gulp.task('copy-' + component, ['webpack-' + component], function() {
     return gulp.src(path.normalize(componentBaseDir + buildConfig.dest + '/*.chunk.js'))
       .pipe(copy())
       .pipe(uglify())

@@ -1,7 +1,7 @@
 :host {
     width: 960px;
     background: white;
-    margin:20px auto;
+    margin: 0 auto;
     box-shadow: 0 0 2px #d0d0d0;
     white-space: nowrap;
     position: relative;
@@ -51,12 +51,34 @@
     color: #999;
     cursor: default;
   }
+  &:after {
+    position: absolute;
+    background-color: #D32F2F;
+    top: 400px;
+    right: -3px;
+    content: "";
+    width: 6px;
+    height: 6px;
+    border-radius: 3px;
+    margin-top: -3px;
+  }
 }
 
 #events {
   position: relative;
   height: 1199px;
   width: 100%;
+  &:after {
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color: #D32F2F;
+    top: 400px;
+    left: 0;
+    right: 0;
+    margin-top: -1px;
+    content: "";
+  }
 }
 
 #allDay {
@@ -66,5 +88,6 @@
   .label {
     @include time-column;
     font-weight: 400;
+    color: #999;
   }
 }
