@@ -1,0 +1,23 @@
+{
+  "name": "calendar",
+  "version": "0.0.1",
+  "authors": [
+    "Emmanuel Garcia <blasten@gmail.com>"
+  ],
+  "description": "Calendar",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "polymer": "Polymer/polymer#^0.5",
+    "paper-icon-button": "Polymer/paper-icon-button#~0.5.5",
+    "core-toolbar": "Polymer/core-toolbar#^0.5",
+    "core-scaffold": "Polymer/core-scaffold#^0.5",
+    "paper-fab": "Polymer/paper-fab#^0.5"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "name": "event-calendar",
+  "version": "0.0.1",
+  "description": "Event Calendar",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Emmanuel Garcia",
+  "license": "MIT",
+  "dependencies": {
+    "moment": "^2.10.2"
+  }
+}

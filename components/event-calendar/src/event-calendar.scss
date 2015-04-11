@@ -1,0 +1,70 @@
+:host {
+    width: 960px;
+    background: white;
+    margin:20px auto;
+    box-shadow: 0 0 2px #d0d0d0;
+    white-space: nowrap;
+    position: relative;
+    display: block;
+}
+
+#header {
+  border-bottom: 1px solid #EEEEEE;
+  height: 20px;
+  div {
+    width: 14%;
+    font-size: 11px;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    line-height: 20px;
+    font-weight: 300;
+    color: #666;
+    display: inline-block;
+    &:hover {
+      cursor: pointer;
+      text-decoration: underline;
+    }
+  }
+
+  .current {
+    color: #D32F2F;
+  }
+}
+
+@mixin time-column {
+  font-family: 'Roboto', sans-serif;
+  font-size: 11px;
+  font-weight: 300;
+  width: 40px;
+  position: absolute;
+  top: 0px;
+  left: -40px;
+}
+
+#hours {
+  @include time-column;
+  div {
+    height: 50px;
+    position: relative;
+    line-height: 20px;
+    top: -10px;
+    color: #999;
+    cursor: default;
+  }
+}
+
+#events {
+  position: relative;
+  height: 1199px;
+  width: 100%;
+}
+
+#allDay {
+  position: relative;
+  min-height: 40px;
+  border-bottom: 2px solid #ccc;
+  .label {
+    @include time-column;
+    font-weight: 400;
+  }
+}
