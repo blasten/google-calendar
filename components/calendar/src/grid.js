@@ -16,7 +16,7 @@ function makeSVGLine(x1, y1, width, dashed) {
 
 export function buildWeeklyView() {
   var $ = this.$;
-  var startDate = this.startDate;
+  var startDate = this.start;
   var width = $.events.offsetWidth;
   var dayWidth = parseInt(width / 7);
   var space = consts.SPACE_BETWEEN_DAYS;

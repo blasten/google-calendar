@@ -1,14 +1,15 @@
 <link href="../polymer/polymer.html" rel="import">
-<polymer-element name="event-calendar" attributes="src icon mini">
+<polymer-element name="calendar-viewer" attributes="start end">
+  <script src="build/event-calendar.js"></script>
   <template>
-    <link rel="stylesheet" href="build/event-calendar.css">
-    <script src="build/event-calendar.js"></script>
+    <link rel="stylesheet" href="build/calendar-viewer.css">
     <div id="header"></div>
     <div id="allDay">
       <div class="label">All day</div>
     </div>
     <div id="events">
       <div id="hours"></div>
+      <content select="calendar-event"></content>
     </div>
   </template>
 </polymer-element>

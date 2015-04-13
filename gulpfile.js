@@ -13,7 +13,7 @@ var sourcemaps = require('gulp-sourcemaps');
 
 var COMPONENT_DIR = './components'
 var DEST_DIR = './.build';
-var customComponents = ['event-calendar'];
+var customComponents = ['calendar'];
 
 gulp.task('default', ['build']);
 

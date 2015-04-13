@@ -14,7 +14,6 @@ var RELEASE_EVENT_NAME = (isTouchDevice) ? 'touchend' : 'mouseup';
 function pressEventHandler(event) {
   console.log('press');
 
-
   // add global event handlers
 
   removeGlobalEventHandlers();

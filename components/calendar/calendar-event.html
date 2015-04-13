@@ -1,0 +1,21 @@
+<link href="../polymer/polymer.html" rel="import">
+<polymer-element name="calendar-event" attributes="start end">
+  <template>
+    <link rel="stylesheet" href="build/calendar-event.css">
+    <div id="time"> 9:00 AM </div>
+    <div id="title">
+      <content></content>
+    </div>
+  </template>
+  <script>
+      Polymer('calendar-event', {
+        publish: {
+          start: '',
+          end: ''
+        },
+        ready: function() {
+      
+        }
+      });
+  </script>
+</polymer-element>
